@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: tlh-bms-service
+  datasource:
+    url: ${tlh.bms.db.url}
+    username: ${tlh.bms.db.username}
+    password: ${tlh.bms.db.password}
+  jpa:
+    hibernate:
+      ddl-auto: update
+server:
+  port: 8440
