@@ -8,4 +8,6 @@ import java.util.Set;
 public interface RoomPriceRepository extends JpaRepository<RoomCategoryPrice, Long> {
 
     Set<RoomCategoryPrice> findByHotel(Long hotel);
+
+    RoomCategoryPrice findByHotelAndRoomCategory(Long hotel, Long category);
 }

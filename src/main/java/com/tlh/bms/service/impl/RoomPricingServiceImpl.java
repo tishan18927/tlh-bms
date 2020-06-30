@@ -20,4 +20,9 @@ public class RoomPricingServiceImpl implements RoomPricingService {
     public Map<Long, RoomCategoryPrice> getPrices(Long hotel) {
         return roomPriceRepository.findByHotel(hotel).stream().collect(Collectors.toMap(RoomCategoryPrice::getRoomCategory, Function.identity()));
     }
+
+    @Override
+    public RoomCategoryPrice getByHotelAndRoomCategory(Long hotel, Long category) {
+        return roomPriceRepository.findByHotelAndRoomCategory(hotel, category);
+    }
 }

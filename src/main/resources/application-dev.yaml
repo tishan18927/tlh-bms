@@ -6,9 +6,13 @@ spring:
       hibernate:
         format_sql: true
       show-sql: true
+
 tlh:
   bms:
     db:
       url: jdbc:postgresql://localhost:5432/tlh-bms
       username: postgres
       password: sandu
+
+stripe:
+  secret_key: sk_test_51GykJhAIfTM5DUfXMKbqFwP0zmdhteW3Zvp9hyNvdXTYFajhA2vuaJbcg4KQ2jw84vTUoYuj7vqiKHyWVxFISHZ100OAV7YfFs
