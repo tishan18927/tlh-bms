@@ -39,6 +39,7 @@ public class PaymentServiceImpl implements PaymentService {
     @Transactional
     public Payment getPayment(Payment representation) {
         //Save transaction in db first to prevent intermediate service errors.
+        //@Transactional will rollback changes if any error is thrown from stripe
         PaymentDetailsEntity saved = paymentRepository.save(
                 RepresentationToEntityConverter.mergeToPaymentEntity(representation));
         stripeService.charge(representation);
